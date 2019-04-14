@@ -244,6 +244,11 @@ function toArrayOfSquares(arr) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 function getMovingSum(arr) {
+   return arr.map(function (value, index) {
+      return arr.slice(0, index + 1).reduce(function (accum, value) {
+          return accum + value;
+      }, 0);
+  });
    throw new Error('Not implemented');
 }
 
@@ -259,6 +264,9 @@ function getMovingSum(arr) {
  * [ "a" ] => []
  */
 function getSecondItems(arr) {
+   return arr.filter(function (value, index) {
+      return index % 2 != 0;
+  });
    throw new Error('Not implemented');
 }
 
@@ -482,6 +490,12 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
+   return arr.reduce(function (accum, value) {
+      if(accum.indexOf(value) < 0) {
+         accum.push(value);
+      }
+       return accum;
+   }, Array());
    throw new Error('Not implemented');
 }
 
