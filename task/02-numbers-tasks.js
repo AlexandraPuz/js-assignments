@@ -22,6 +22,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
+    return width*height;
     throw new Error('Not implemented');
 }
 
@@ -38,6 +39,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
+    return 2*Math.PI*radius;
     throw new Error('Not implemented');
 }
 
@@ -54,7 +56,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-    throw new Error('Not implemented');
+   throw new Error('Not implemented');
 }
 
 /**
@@ -127,6 +129,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
+
     throw new Error('Not implemented');
 }
 
@@ -143,6 +146,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
+    return +value;
     throw new Error('Not implemented');
 }
 
