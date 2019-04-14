@@ -26,6 +26,9 @@
  *
  */
 function getComposition(f,g) {
+    return function (x) {
+        return f(g(x));
+    }
     throw new Error('Not implemented');
 }
 

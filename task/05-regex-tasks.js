@@ -31,6 +31,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
+   return /{[a-f\d]{8}-([a-f\d]{4}-){3}[a-f\d]{12}}/i;
    throw new Error('Not implemented');
 }
 
@@ -53,6 +54,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
+   return /^s|pit|[^t]$/;
    throw new Error('Not implemented');
 }
 
@@ -72,6 +74,7 @@ function getRegexForPitSpot() {
  * @return {RegExp}
  */
 function getRegexForIPv4() {
+   return /^[0-2]?[\d]?[\d]{1}(\.[0-2]?[\d]?[\d]{1}){3}$/;
    throw new Error('Not implemented');
 }
 
